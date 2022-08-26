@@ -1,0 +1,10 @@
+<?php
+//at top:
+require('header.php'); 
+ ?>
+ <?php
+// at bottom:
+require('footer.php');
+?>
+
+

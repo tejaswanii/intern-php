@@ -1,0 +1,12 @@
+<?php
+ // At top:
+require('header.php'); 
+ ?>
+  <?php
+// At bottom:
+require('footer.php');
+ ?>
+ <?php
+ //Wherever navbar goes:
+require('navbar.php'); 
+?>

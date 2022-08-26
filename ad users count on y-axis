@@ -1,0 +1,71 @@
+<?php
+
+$sql = "SELECT * from USERS where ID and DATE_CREATED";
+
+//here is the result generated
+
+//here goes the charts using chartJS
+
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="white-box">
+
+<!-- Start Canvas -> Desenhar elementos gráficos usando JS -->
+<div class="chart" width="980" height="380">
+<canvas class="line-chart" style="position: relative; height:40vh; width:80vw"></canvas>
+
+<!-- Include Chart JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<script>
+    var ctx = document.getElementsByClassName("line-chart");
+
+    //Type, Data e options
+    var chartGraph = new Chart(ctx, {
+        type: 'line', 
+        data: {
+            //Aqui vai os meses
+            labels: ["Jan","Fev","Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+            datasets: [{
+                label: "USUÁRIOS ATIVOS",
+                //Aqui eu colocaria a quantidade de usuários cadastrados em cada mês do ano. 
+                data: [5,10,5,14,20,15,6,14,8,12,15,5,10],
+                borderWidth: 6,
+                borderColor: 'rgba(77,166,253,0.85)',
+                backgroundColor: "transparent",
+
+            },
+            {
+
+                label: "USUÁRIOS INATIVOS",
+                data: [9,14,11,6,5,38,6,3,15,17,7,10,20],
+                borderWidth: 6,
+                borderColor: 'rgba(6,204,6,0.85)',
+                backgroundColor: "transparent",
+
+            },
+            ],
+        
+        },
+        options: {
+            title:{
+                display: true, 
+                fontSize: 20, 
+                text: "RELATÓRIO DE VENDAS ANUAL",
+            }
+        },
+        labels:{
+            fontStyle: "bold",
+        }
+    });
+
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+?>
